@@ -34,6 +34,19 @@ st.markdown(
         font-size: 1em;
         margin-bottom: 10px;
     }
+    .duvidas-container {
+        background-color: #FFEBEE;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .duvidas-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #B71C1C;
+        margin-bottom: 10px;
+    }
     .descricao {
         font-size: 1em;
         color: #424242;
@@ -60,10 +73,10 @@ def render_locais_ocupados(local, horario, descricao, participantes):
             st.write(participante)
     st.markdown('</div>', unsafe_allow_html=True)
 
-# Função para renderizar Locais Disponíveis
+# Função para renderizar Locais Disponíveis com a opção de "Reservar Sala"
 def render_locais_disponiveis(local, reservas):
     st.markdown('<div class="container">', unsafe_allow_html=True)
-    st.markdown(f'<div class="item-titulo">Disponível</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="item-titulo">Reservar Sala</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="horario">{local}</div>', unsafe_allow_html=True)
     
     # Formulário para marcar horário
@@ -89,8 +102,8 @@ def render_locais_disponiveis(local, reservas):
 
 # Dados de exemplo
 locais_ocupados = [
-    {"local": "Sala de Reunião 2", "horario": "19h-20h", "descricao": "Feedback de Projeto", "participantes": ["Alice", "Bob", "Carlos"]},
-    {"local": "Sala de Reunião 3", "horario": "15h-16h", "descricao": "Reunião Semanal", "participantes": ["Diana", "Eve", "Frank"]},
+    {"local": "Sala de Reunião 2", "horario": "19h-20h", "descricao": "Feedback de Projeto", "participantes": ["Manoela", "Camila", "Diego"]},
+    {"local": "Sala de Reunião 3", "horario": "15h-16h", "descricao": "Reunião Semanal", "participantes": ["Carol", "Laura", "Amanda"]},
     {"local": "Sala de Reunião 5", "horario": "10h15-12h20", "descricao": "Treinamento de Equipe", "participantes": ["Vivian", "Diego", "Rogério"]}
 ]
 
